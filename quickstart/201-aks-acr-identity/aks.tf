@@ -21,4 +21,8 @@ resource "azurerm_kubernetes_cluster" "default" {
   role_based_access_control {
     enabled = true
   }
+  default_node_pool {
+    enable_host_encryption = true
+    os_disk_type = "Ephemeral"
+  }
 }
